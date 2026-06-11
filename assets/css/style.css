@@ -1,0 +1,141 @@
+@font-face {
+  /* Special Elite — Apache License 2.0 (Google Fonts) */
+  font-family: "Special Elite";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/special-elite-latin-400-normal.woff2") format("woff2");
+}
+
+:root {
+  font-family: "Special Elite", "Courier New", "Lucida Console", Monaco,
+    monospace;
+  line-height: 1.6;
+  color: #7bff75;
+  background: #030712;
+}
+
+body {
+  margin: 0;
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  min-height: 100vh;
+  background-color: #05050b;
+  background-image: repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.02) 0 2px,
+      transparent 2px 6px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.015) 0 1px,
+      transparent 1px 4px
+    );
+}
+
+label {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  padding: 0.1rem 0.4rem;
+  color: #9bff9f;
+  background: #031605;
+  border: 2px solid #00d65c;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  border: 2px solid #00d65c;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: #6bff82;
+  background: #010c04;
+  resize: vertical;
+  box-sizing: border-box;
+  font-family: inherit;
+  cursor: text;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+textarea[readonly] {
+  border-color: #00ff7a;
+}
+
+.app {
+  width: min(900px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.stack {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.25rem;
+  row-gap: 1.25rem;
+  align-items: start;
+}
+
+.stack-header {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding: 0.35rem 1rem 0.5rem;
+  margin: 0;
+  border: 2px solid #00d65c;
+  background: rgba(3, 10, 5, 0.85);
+  color: #7bff75;
+}
+
+section {
+  padding: 1rem;
+  border: 3px double #00d65c;
+  background: #030a05;
+}
+
+#input {
+  font-family: "Special Elite", "Courier New", "Lucida Console", Monaco,
+    monospace;
+}
+
+.field-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.field-header button {
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: #021b09;
+  color: #6bff82;
+  border: 2px solid #00d65c;
+  border-radius: 0;
+  padding: 0.4rem 1.1rem;
+  cursor: pointer;
+}
+
+.field-header button:hover,
+.field-header button:focus-visible {
+  background: #00d65c;
+  color: #021b09;
+}
+
+@media (max-width: 700px) {
+  .stack {
+    grid-template-columns: 1fr;
+  }
+}
